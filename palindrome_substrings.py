@@ -41,7 +41,7 @@ def count_palindromic_substrings_without_memo(string: str) -> int:
     return count
 
 def compare_execution_time(string: str) -> None:
-    print(f"String: {string[:10]}{'...' if len(string) >= 10 else ''} (tamanho: {len(string)})")
+    print(f"String: {string[:10]}{'...' if len(string) >= 10 else ''} (tamanho: {len(string)})\n")
 
     start_time = time.perf_counter()
     count_with_memo = count_palindromic_substrings_with_memo(string)
@@ -54,13 +54,13 @@ def compare_execution_time(string: str) -> None:
     time.sleep(1)
     print(f"Resultado (com memoização): {count_with_memo} substrings palíndromas")
     time.sleep(1)
-    print(f"Tempo (com memoização): {time_with_memo:.6f} segundos")
+    print(f"Tempo (com memoização): {time_with_memo:.6f} segundos\n")
     time.sleep(1)
     print(f"Resultado (sem memoização): {count_without_memo} substrings palíndromas")
     time.sleep(1)
-    print(f"Tempo (sem memoização): {time_without_memo:.6f} segundos")
+    print(f"Tempo (sem memoização): {time_without_memo:.6f} segundos\n")
     time.sleep(1)
-    print(f"Razão de tempo: {time_without_memo / time_with_memo:.2f}x mais lento sem memoização")
+    print(f"Razão de tempo: {time_without_memo / time_with_memo:.2f}x mais lento sem memoização\n")
 
 string = 'a' * 500
 compare_execution_time(string)
